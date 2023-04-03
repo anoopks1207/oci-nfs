@@ -157,7 +157,7 @@ variable instance_os {
 # Only latest supported OS version works. if I use 7.7, it doesn't return an image ocid.
 variable linux_os_version {
     description = "Operating system version for compute instances except NAT"
-    default = "8.6"
+    default = "8.7"
 }
 
 
