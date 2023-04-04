@@ -40,7 +40,7 @@ locals {
 
 
   bastion_subnet_id = var.use_existing_vcn ? var.bastion_subnet_id : element(concat(oci_core_subnet.public.*.id, [""]), 0)
-  image_id          = ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq
+  image_id          = (var.use_marketplace_image ? var.mp_listing_resource_id : data.oci_core_images.InstanceImageOCID.images.0.id)
   storage_subnet_id = var.use_existing_vcn ? var.storage_subnet_id : element(concat(oci_core_subnet.storage.*.id, [""]), 0)
   # If shape is VM* or BM.HPC2.36, then fs_subnet_id will be set to storage_subnet_id rather than setting to "". 
   fs_subnet_id        = var.use_existing_vcn ? (local.storage_server_dual_nics ? var.fs_subnet_id : var.storage_subnet_id) : (local.storage_server_dual_nics ? element(concat(oci_core_subnet.fs.*.id, [""]), 0) :  element(concat(oci_core_subnet.storage.*.id, [""]), 0))
