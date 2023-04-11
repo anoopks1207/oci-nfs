@@ -51,6 +51,10 @@ groupings:
     - fs_subnet_cidr
     - ha_vip_private_ip
     - ha_vip_hostname
+  - title: "OS Configuration"
+    visible: true
+    variables:
+    - marketplace_listing
   - title: "Bastion Instance Configuration"
     visible: true
     variables:
@@ -237,6 +241,19 @@ variables:
     minimum: 50
     title: "Size of the boot volume in GB"
     default: 100
+  
+  marketplace_listing:
+    type: enum
+    title: "Image version"
+    description: "Marketplace listing to use"
+    required: true
+    enum:
+      - "OL7"
+      - "OL8"
+    default: "OL7"
+    visible:
+      and:
+        - ${use_marketplace_image}
 
   scratch_storage_server_shape:
     title: "NFS Storage Server Compute Shape"

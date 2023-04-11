@@ -48,6 +48,10 @@ variable fs_subnet_id {
   default = ""
 }
 
+variable "marketplace_listing" { 
+  default = "OL7"
+}
+
 # VCN IP Range/Network CIDR to use for VCN.
 variable vcn_cidr { default = "10.0.0.0/16" }
 # Subnet IP Range/CIDR to use for regional public subnet. Example: 10.0.0.0/24. Must be within VCN subnet.
@@ -252,7 +256,7 @@ variable volume_type_vpus_per_gb_mapping {
 variable mp_listing_id { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }
 variable mp_listing_resource_id { default = "ocid1.image.oc1..aaaaaaaabxwrflhsoaipmm4v7xvjfsmou42bp2fwpmuvyyug2sksfmroihta" }
 variable mp_listing_resource_version { default = "1.0" }
-variable use_marketplace_image { default = false }
+variable use_marketplace_image { default = true }
 
 # ------------------------------------------------------------------------------------------------------------
 
