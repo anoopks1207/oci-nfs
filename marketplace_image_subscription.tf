@@ -2,6 +2,7 @@
 #Eg. Modify accordingly to your Application/Listing
 locals {
   mp_listing_id               = var.mp_listing_id
+  mp_version_id = var.use_old_marketplace_image ? var.marketplace_version_id[split(".", var.old_marketplace_listing)[0]] : var.marketplace_version_id[var.marketplace_listing]
   mp_listing_resource_id      = var.mp_listing_resource_id
   mp_listing_resource_version = var.mp_listing_resource_version
 }
@@ -11,7 +12,7 @@ resource "oci_core_app_catalog_listing_resource_version_agreement" "mp_image_agr
   count = var.use_marketplace_image ? 1 : 0
 
   listing_id               = local.mp_listing_id
-  listing_resource_version = local.mp_listing_resource_version
+  listing_resource_version = local.mp_version_id
 }
 
 #Accept Terms and Subscribe to the image, placing the image in a particular compartment
