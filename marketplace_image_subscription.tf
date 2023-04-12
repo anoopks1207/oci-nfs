@@ -13,7 +13,7 @@ resource "oci_core_app_catalog_listing_resource_version_agreement" "mp_image_agr
   count = var.use_marketplace_image ? 1 : 0
 
   listing_id               = local.mp_listing_id
-  listing_resource_version = local.mp_version_id
+  listing_resource_version = local.mp_listing_resource_version
 }
 
 #Accept Terms and Subscribe to the image, placing the image in a particular compartment
