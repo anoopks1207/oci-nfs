@@ -52,6 +52,10 @@ variable "marketplace_listing" {
   default = "OL7"
 }
 
+variable "marketplace_listing_id" {
+    default = "ocid1.appcataloglisting.oc1..aaaaaaaahzcnanlki5vonyaeoiajjisejikzczygqqwheifymjqx3ft4iowa"
+}
+
 # VCN IP Range/Network CIDR to use for VCN.
 variable vcn_cidr { default = "10.0.0.0/16" }
 # Subnet IP Range/CIDR to use for regional public subnet. Example: 10.0.0.0/24. Must be within VCN subnet.
