@@ -19,6 +19,7 @@ groupings:
     - mp_listing_resource_id
     - mp_listing_resource_version
     - use_marketplace_image
+    - marketplace_version_id
     - block_size
     - fs_name
     - instance_os
@@ -366,7 +367,24 @@ variables:
     title: "Size of the boot volume in GB. Recommend using 200-300 GB in production to ensure there is enough space for logs."
     default: 300
 
+  use_marketplace_image:
+    type: boolean
+    title: "use marketplace image"
+    description: "Use marketplace image, otherwise provide custom image OCID"
+    default: true
 
+   marketplace_listing:
+    type: enum
+    title: "Image version"
+    description: "Marketplace listing to use"
+    required: true
+    enum:
+      - "OL7"
+      - "OL8"
+    default: "OL7"
+    visible:
+      and:
+        - ${use_marketplace_image}
 
   use_uhp:
     type: boolean

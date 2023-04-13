@@ -157,7 +157,7 @@ variable instance_os {
 # Only latest supported OS version works. if I use 7.7, it doesn't return an image ocid.
 variable linux_os_version {
     description = "Operating system version for compute instances except NAT"
-    default = "7.9"
+    default = "8.6"
 }
 
 
@@ -256,6 +256,13 @@ variable use_marketplace_image { default = false }
 
 # ------------------------------------------------------------------------------------------------------------
 
+variable "marketplace_version_id" { 
+  type = map(string) 
+  default = { 
+       "OL7" = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
+       "OL8" = "OracleLinux-8-RHCK-OFED-5.4-3.6.8.1-2023.01.10-0"
+  }
+}
 
 
 # Generate a new strong password for hacluster user
