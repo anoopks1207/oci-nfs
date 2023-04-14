@@ -257,7 +257,7 @@ variable use_marketplace_image { default = false }
 # ------------------------------------------------------------------------------------------------------------
 
 variable "marketplace_listing" { 
-  default = "OL7"
+  default = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
 } 
 variable "marketplace_version_id" { 
   type = map(string) 
