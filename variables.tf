@@ -262,7 +262,7 @@ variable "marketplace_listing" {
 variable "marketplace_version_id" { 
   type = map(string) 
   default = { 
-       "OL77" = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
+       "OL9" = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
        "OL8" = "OracleLinux-8-RHCK-OFED-5.4-3.6.8.1-2023.01.10-0"
   }
 }
