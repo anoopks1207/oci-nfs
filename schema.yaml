@@ -16,6 +16,7 @@ groupings:
     - ad_number
     - images
     - mp_listing_id
+    - marketplace_listing_id
     - mp_listing_resource_id
     - mp_listing_resource_version
     - use_marketplace_image
