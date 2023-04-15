@@ -74,6 +74,10 @@ groupings:
     - storage_server_node_count
     - storage_server_hostname_prefix
     - storage_server_boot_volume_size
+  - title: "OS Configuration"
+    visible: true
+    variables:
+    - marketplace_listing
   - title: "NFS Storage Configuration"
     variables:
     - use_uhp
