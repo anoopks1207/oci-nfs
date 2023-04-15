@@ -241,7 +241,6 @@ variable volume_type_vpus_per_gb_mapping {
     "None" = "-1"
   }
 }
-31650
 
 # Not compatible with E3.Flex shapes.  Need image released after April 2020.
 #-------------------------------------------------------------------------------------------------------------
