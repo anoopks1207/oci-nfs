@@ -258,17 +258,20 @@ variable use_marketplace_image { default = false }
 variable "marketplace_listing" { 
   default = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
 } 
-variable "marketplace_version_id" { 
-  type = map(string) 
-  default = { 
-       "OL7" = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq"
-       "OL8" = "ocid1.image.oc1.me-dubai-1.aaaaaaaalyzyjjt3uuqpaihs4yxa6zhu6daj43tszcylavv6rmteobgssq7q"
-  }
-}
+#variable "marketplace_version_id" { 
+#  type = map(string) 
+#  default = { 
+#       "OL7" = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
+#       "OL8" = "OracleLinux-8-RHCK-OFED-5.4-3.6.8.1-2023.01.10-0"
+#  }
+#}
 
-#variable "marketplace_listing_id_ol7" { 
-#  default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq"
-#} 
+variable "marketplace_listing_id_ol7" { 
+  default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq"
+} 
+variable "marketplace_listing_id_ol8" { 
+  default = "ocid1.image.oc1.me-dubai-1.aaaaaaaalyzyjjt3uuqpaihs4yxa6zhu6daj43tszcylavv6rmteobgssq7q"
+} 
 # Generate a new strong password for hacluster user
 resource random_string hacluster_user_password {
   length      = 16
