@@ -249,7 +249,7 @@ variable volume_type_vpus_per_gb_mapping {
 # Oracle Linux 7.8 UEK Image for filesystem
 # ------------------------------------------------------------------------------------------------------------
 variable mp_listing_id { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }
-variable mp_listing_resource_id { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" }
+#variable mp_listing_resource_id { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" }
 variable mp_listing_resource_version { default = "1.0" }
 variable use_marketplace_image { default = false }
 
