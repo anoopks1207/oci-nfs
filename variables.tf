@@ -271,7 +271,13 @@ variable "marketplace_listing_id_ol7" {
 } 
 variable "marketplace_listing_id_ol8" { 
   default = "ocid1.image.oc1.me-dubai-1.aaaaaaaalyzyjjt3uuqpaihs4yxa6zhu6daj43tszcylavv6rmteobgssq7q"
-} 
+}
+
+variable "mp_listing_id_ol8" {
+  default = 0
+}
+
+
 # Generate a new strong password for hacluster user
 resource random_string hacluster_user_password {
   length      = 16
