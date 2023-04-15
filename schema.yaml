@@ -26,6 +26,8 @@ groupings:
     - instance_os
     - linux_os_version
     - marketplace_source_images
+    - marketplace_listing_id_ol7
+    - marketplace_listing_id_ol8
   - title: "NFS Filesystem Configuration"
     visible: true
     variables:
