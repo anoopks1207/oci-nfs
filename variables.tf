@@ -241,7 +241,7 @@ variable volume_type_vpus_per_gb_mapping {
     "None" = "-1"
   }
 }
-
+31650
 
 # Not compatible with E3.Flex shapes.  Need image released after April 2020.
 #-------------------------------------------------------------------------------------------------------------
@@ -267,7 +267,9 @@ variable "marketplace_version_id" {
   }
 }
 
-
+variable "marketplace_listing_id_ol7" { 
+  default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq"
+} 
 # Generate a new strong password for hacluster user
 resource random_string hacluster_user_password {
   length      = 16
