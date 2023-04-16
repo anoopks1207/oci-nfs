@@ -38,13 +38,13 @@ locals {
   # length(regexall("10.0.0.0/16", var.vcn_cidr)) > 0 ? "10.0.6.0/24" : var.fs_subnet_cidr
   create_fs_subnet = local.storage_server_dual_nics ? (var.use_existing_vcn ? 0 : 1) : 0
   
-  custom_bastion_image_ocid = var.unsupported_bastion ? var.unsupported_bastion_image : var.custom_bastion_image
-  bastion_image = var.use_standard_image ? oci_core_app_catalog_subscription.bastion_mp_image_subscription[0].listing_resource_id : local.custom_bastion_image_ocid
+  #custom_bastion_image_ocid = var.unsupported_bastion ? var.unsupported_bastion_image : var.custom_bastion_image
+  #bastion_image = var.use_standard_image ? oci_core_app_catalog_subscription.bastion_mp_image_subscription[0].listing_resource_id : local.custom_bastion_image_ocid
 
   bastion_subnet_id = var.use_existing_vcn ? var.bastion_subnet_id : element(concat(oci_core_subnet.public.*.id, [""]), 0)
   #image_id          = (var.use_marketplace_image ? var.mp_listing_resource_id : data.oci_core_images.InstanceImageOCID.images.0.id)
   image_id = substr(var.marketplace_listing,0,3) == "OL7" ? var.marketplace_listing_id_ol7 : var.marketplace_listing_id_ol8
-  
+
   storage_subnet_id = var.use_existing_vcn ? var.storage_subnet_id : element(concat(oci_core_subnet.storage.*.id, [""]), 0)
   # If shape is VM* or BM.HPC2.36, then fs_subnet_id will be set to storage_subnet_id rather than setting to "". 
   fs_subnet_id        = var.use_existing_vcn ? (local.storage_server_dual_nics ? var.fs_subnet_id : var.storage_subnet_id) : (local.storage_server_dual_nics ? element(concat(oci_core_subnet.fs.*.id, [""]), 0) :  element(concat(oci_core_subnet.storage.*.id, [""]), 0))
