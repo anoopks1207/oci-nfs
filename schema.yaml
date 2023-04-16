@@ -70,6 +70,12 @@ groupings:
     - storage_server_node_count
     - storage_server_hostname_prefix
     - storage_server_boot_volume_size
+  - title: OS Configuration
+    visible: true
+    variables:
+    - marketplace_listing
+    - custom_bastion_image
+    - unsupported_bastion_image
   - title: "NFS Storage Configuration"
     variables:
     - use_uhp
@@ -365,7 +371,19 @@ variables:
     minimum: 50
     title: "Size of the boot volume in GB. Recommend using 200-300 GB in production to ensure there is enough space for logs."
     default: 300
-
+  
+  marketplace_listing:
+    type: enum
+    title: "Image version"
+    description: "Marketplace listing to use"
+    required: true
+    enum:
+      - "OL7"
+      - "OL8"
+    default: "OL7"
+    visible:
+      and:
+        - ${use_marketplace_image}
 
 
   use_uhp:
