@@ -270,7 +270,7 @@ variable "marketplace_listing_id_ol7" {
   default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq"
 } 
 variable "marketplace_listing_id_ol8" { 
-  default = "ocid1.image.oc1.me-dubai-1.aaaaaaaalyzyjjt3uuqpaihs4yxa6zhu6daj43tszcylavv6rmteobgssq7q"
+  default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq"
 }
 
 variable "mp_listing_id_ol8" {
