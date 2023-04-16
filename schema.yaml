@@ -385,7 +385,32 @@ variables:
       and:
         - ${use_marketplace_image}
 
+  unsupported_bastion_image:
+    title: "Image OCID"
+    description: "Custom image ID for compute nodes. Please note that only Oracle Linux 7 and Ubuntu 20.04 are supported as bastion image at this moment."
+    type: string
+    required: true
+    visible:
+      and: 
+        - ${unsupported_bastion}
+        - not: 
+            - ${use_standard_image}
+    default: "image.ocid"
 
+  custom_bastion_image:
+    title: "Bastion Image ID"
+    description: "Custom image ID for bastion nodes. Please note that only Oracle Linux 7 and Ubuntu 20.04 are supported as bastion image at this moment. "
+    type: oci:core:image:id
+    dependsOn:
+      compartmentId: ${bastion_image_compartment}
+    visible:
+      and: 
+          - not:
+              - ${use_standard_image}
+          - not: 
+              - ${unsupported_bastion}
+    required: true
+    
   use_uhp:
     type: boolean
     title: "XFS-0 : Build file system using Ultra High Performance Block Volume. (Only supported on Storage Servers with minimum 16 cores/OCPU)."
