@@ -74,7 +74,6 @@ groupings:
     visible: true
     variables:
     - marketplace_listing
-    - unsupported_bastion_image
   - title: "NFS Storage Configuration"
     variables:
     - use_uhp
@@ -381,18 +380,6 @@ variables:
       - "OL8"
     default: "OL7"
     visible: true
-
-  custom_bastion_image:
-    title: "Bastion Image ID"
-    description: "Custom image ID for bastion nodes. Please note that only Oracle Linux 7 and Ubuntu 20.04 are supported as bastion image at this moment. "
-    type: oci:core:image:id
-    dependsOn:
-      compartmentId: ${bastion_image_compartment}
-    visible:
-      and: 
-          - not:
-              - ${marketplace_listing}
-    required: true
 
   use_uhp:
     type: boolean
