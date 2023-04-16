@@ -1,7 +1,7 @@
 #Local variables pointing to the Marketplace catalog resource
 #Eg. Modify accordingly to your Application/Listing
 locals {
-  mp_listing_id               = var.mp_listing_id
+  mp_listing_id               = var.image_id
   mp_listing_resource_id      = var.mp_listing_resource_id
   mp_listing_resource_version = var.mp_listing_resource_version
 }
