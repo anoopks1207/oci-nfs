@@ -261,16 +261,12 @@ variable use_marketplace_image { default = false }
 
 # ------------------------------------------------------------------------------------------------------------
 
-variable "marketplace_listing" { 
-  default = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
-} 
+#variable "marketplace_listing" { 
+#  default = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
+#} 
 
-variable "marketplace_listing_id_ol7" { 
-  default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq"
-} 
-variable "marketplace_listing_id_ol8" { 
-  default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq"
-}
+variable marketplace_listing_id_ol7 { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" } 
+variable marketplace_listing_id_ol8 { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" }
 
 variable "mp_listing_id_ol8" {
   default = 0
