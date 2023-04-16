@@ -276,7 +276,7 @@ variable "mp_listing_id_ol8" {
   default = 0
 }
 
-var.mp_listing_id != "" ? var.mp_listing_id : var.marketplace_listing_id_ol8
+var.mp_listing_id != "" ? var.mp_listing_id_os : var.marketplace_listing_id_ol8
 
 mp_listing_resource_id = var.use_marketplace_image ? substr(var.marketplace_listing,0,3) == "OL7" ? var.marketplace_listing_id_ol7 : var.marketplace_listing_id_ol8
 
