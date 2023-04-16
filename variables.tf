@@ -250,6 +250,7 @@ variable volume_type_vpus_per_gb_mapping {
 # ------------------------------------------------------------------------------------------------------------
 variable mp_listing_id { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }
 #variable mp_listing_resource_id { default = "ocid1.image.oc1..aaaaaaaabxwrflhsoaipmm4v7xvjfsmou42bp2fwpmuvyyug2sksfmroihta" }
+variable mp_listing_resource_id { default = "" }
 variable mp_listing_resource_version { default = "1.0" }
 variable use_marketplace_image { default = true }
 
