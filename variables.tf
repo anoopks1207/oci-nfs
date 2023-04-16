@@ -157,7 +157,7 @@ variable instance_os {
 # Only latest supported OS version works. if I use 7.7, it doesn't return an image ocid.
 variable linux_os_version {
     description = "Operating system version for compute instances except NAT"
-    default = "8.6"
+    default = "7.9"
 }
 
 
@@ -242,18 +242,13 @@ variable volume_type_vpus_per_gb_mapping {
   }
 }
 
+
 # Not compatible with E3.Flex shapes.  Need image released after April 2020.
 #-------------------------------------------------------------------------------------------------------------
 # Marketplace variables
 # OL78UEK-4.14.35-1902.305.4.el7uek.x86_64
 # Oracle Linux 7.8 UEK Image for filesystem
 # ------------------------------------------------------------------------------------------------------------
-#variable mp_listing_id { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }
-#variable mp_listing_resource_id { default = "ocid1.image.oc1..aaaaaaaabxwrflhsoaipmm4v7xvjfsmou42bp2fwpmuvyyug2sksfmroihta" }
-#variable mp_listing_resource_id { default = "" }
-#variable mp_listing_resource_version { default = "1.0" }
-#variable use_marketplace_image { default = true }
-
 variable mp_listing_id { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }
 variable mp_listing_resource_id { default = "ocid1.image.oc1..aaaaaaaabxwrflhsoaipmm4v7xvjfsmou42bp2fwpmuvyyug2sksfmroihta" }
 variable mp_listing_resource_version { default = "1.0" }
@@ -261,16 +256,7 @@ variable use_marketplace_image { default = false }
 
 # ------------------------------------------------------------------------------------------------------------
 
-#variable "marketplace_listing" { 
-#  default = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
-#} 
 
-variable marketplace_listing_id_ol7 { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" } 
-variable marketplace_listing_id_ol8 { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" }
-
-variable "mp_listing_id_ol8" {
-  default = 0
-}
 
 # Generate a new strong password for hacluster user
 resource random_string hacluster_user_password {
@@ -358,4 +344,3 @@ variable "fs3_disk_count" {
 variable "fs3_disk_size" {
   default = "50"
 }
-
