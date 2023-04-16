@@ -372,8 +372,8 @@ variables:
   
   marketplace_listing:
     type: enum
-    title: "Image version"
-    description: "OS Image to use"
+    title: "OS version"
+    description: "Select OS image to use"
     required: true
     enum:
       - "OL7"
