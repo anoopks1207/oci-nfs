@@ -259,7 +259,7 @@ variable mp_listing_resource_version { default = "1.0" }
 variable use_marketplace_image { default = true }
 
 # ------------------------------------------------------------------------------------------------------------
-vairable image_id_temp {}
+#vairable image_id_temp {}
 variable marketplace_listing {}
 variable image_id { default = "ocid1.image.oc1..aaaaaaaabxwrflhsoaipmm4v7xvjfsmou42bp2fwpmuvyyug2sksfmroihta" }
 variable marketplace_listing_id_ol7 { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }  #ol7
