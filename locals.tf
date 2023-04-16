@@ -40,9 +40,10 @@ locals {
   
   #custom_bastion_image_ocid = var.unsupported_bastion ? var.unsupported_bastion_image : var.custom_bastion_image
   #bastion_image = var.use_standard_image ? oci_core_app_catalog_subscription.bastion_mp_image_subscription[0].listing_resource_id : local.custom_bastion_image_ocid
-
+  image_id_temp = (substr(var.marketplace_listing,0,3) == "OL7" ? var.marketplace_listing_id_ol7 : var.marketplace_listing_id_ol8)
   bastion_subnet_id = var.use_existing_vcn ? var.bastion_subnet_id : element(concat(oci_core_subnet.public.*.id, [""]), 0)
-  image_id          = (var.use_marketplace_image ? var.mp_listing_resource_id : data.oci_core_images.InstanceImageOCID.images.0.id)
+  #image_id          = (var.use_marketplace_image ? var.mp_listing_resource_id : data.oci_core_images.InstanceImageOCID.images.0.id)
+  image_id          = (var.use_marketplace_image ? var.mp_listing_resource_id : var.image_id_temp)
   #image_id = substr(var.marketplace_listing,0,3) == "OL7" ? var.marketplace_listing_id_ol7 : var.marketplace_listing_id_ol8
 
   storage_subnet_id = var.use_existing_vcn ? var.storage_subnet_id : element(concat(oci_core_subnet.storage.*.id, [""]), 0)
