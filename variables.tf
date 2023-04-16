@@ -264,13 +264,6 @@ variable use_marketplace_image { default = false }
 variable "marketplace_listing" { 
   default = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
 } 
-#variable "marketplace_version_id" { 
-#  type = map(string) 
-#  default = { 
-#       "OL7" = "OracleLinux-7-RHCK-3.10.0-OFED-5.4-3.6.8.1-2023.01.10-0"
-#       "OL8" = "OracleLinux-8-RHCK-OFED-5.4-3.6.8.1-2023.01.10-0"
-#  }
-#}
 
 variable "marketplace_listing_id_ol7" { 
   default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq"
