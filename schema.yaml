@@ -74,7 +74,6 @@ groupings:
     visible: true
     variables:
     - marketplace_listing
-    - custom_bastion_image
     - unsupported_bastion_image
   - title: "NFS Storage Configuration"
     variables:
@@ -375,27 +374,13 @@ variables:
   marketplace_listing:
     type: enum
     title: "Image version"
-    description: "Marketplace listing to use"
+    description: "OS Image to use"
     required: true
     enum:
       - "OL7"
       - "OL8"
     default: "OL7"
-    visible:
-      and:
-        - ${use_marketplace_image}
-
-  unsupported_bastion_image:
-    title: "Image OCID"
-    description: "Custom image ID for compute nodes. Please note that only Oracle Linux 7 and Ubuntu 20.04 are supported as bastion image at this moment."
-    type: string
-    required: true
-    visible:
-      and: 
-        - ${unsupported_bastion}
-        - not: 
-            - ${use_standard_image}
-    default: "image.ocid"
+    visible: true
 
   custom_bastion_image:
     title: "Bastion Image ID"
@@ -406,11 +391,9 @@ variables:
     visible:
       and: 
           - not:
-              - ${use_standard_image}
-          - not: 
-              - ${unsupported_bastion}
+              - ${marketplace_listing}
     required: true
-    
+
   use_uhp:
     type: boolean
     title: "XFS-0 : Build file system using Ultra High Performance Block Volume. (Only supported on Storage Servers with minimum 16 cores/OCPU)."
