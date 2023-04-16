@@ -276,8 +276,6 @@ variable "mp_listing_id_ol8" {
   default = 0
 }
 
-
-
 # Generate a new strong password for hacluster user
 resource random_string hacluster_user_password {
   length      = 16
