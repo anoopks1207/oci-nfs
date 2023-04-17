@@ -265,7 +265,7 @@ variable "mp_listing_resource_id" {
   default = ""
   filter {
     name = "display_name"
-    values = ["^([a-zA-z]+)-([a-zA-z]+)-([\\.0-9]+)-([\\.0-9-]+)$"]
+    values = ["Oracle-Linux"]
     regex = true
   }
 }
