@@ -787,11 +787,7 @@ variables:
     description: "Marketplace Image OCID"
     dependsOn:
       compartmentId: ${compartment_ocid}
-    visible:
-      and:
-        - eq:
-          - ${mp_listing_resource_id}
-          - "Oracle-Linux-7.9-2023.02.28-1"
+
 
   mp_listing_resource_version:
     type: string
