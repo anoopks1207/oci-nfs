@@ -782,7 +782,7 @@ variables:
     description: "Marketplace Listing ID"
 
   mp_listing_resource_id:
-    type: oci:core:image:
+    type: oci:core:image:id
     title: Select OS Image
     required: true
     description: "Marketplace Image OCID"
