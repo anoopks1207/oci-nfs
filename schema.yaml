@@ -781,18 +781,27 @@ variables:
     required: true
     description: "Marketplace Listing ID"
 
-  mp_listing_resource_id:
+  mp_listing_resource_id_os:
     type: oci:core:image:id
     required: true
     description: "Marketplace Image OCID"
     dependsOn:
       compartmentId: ${compartment_ocid}
+  
+  mp_listing_resource_id_os:
+    title: OS image to use
+    type: integer
+    required: true
+    default: "VM.Standard2.4"
     visible:
       and:
         - or:
           - eq:
-            - ${mp_listing_resource_id}
+            - ${mp_listing_resource_id_os}
             - "Oracle"
+
+
+
 
   mp_listing_resource_version:
     type: string
