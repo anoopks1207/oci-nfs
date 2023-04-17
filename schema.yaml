@@ -787,19 +787,17 @@ variables:
     description: "Marketplace Image OCID"
     dependsOn:
       compartmentId: ${compartment_ocid}
-  
+
   mp_listing_resource_id:
-    title: OS image to use
-    type: integer
+    type: enum
+    title: "OS version"
+    description: "Select OS image to use"
     required: true
-    default: "VM.Standard2.4"
-    visible:
-      and:
-        - eq:
-          - ${mp_listing_resource_id_os}
-          - "Oracle"
-
-
+    enum:
+      - "Oracle-Linux-7.9-2023.02.28-1"
+      - "Oracle-Linux-8.7-2023.02.28-1"
+    default: "Oracle-Linux-7.9-2023.02.28-1"
+    visible: true
 
 
   mp_listing_resource_version:
