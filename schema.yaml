@@ -75,7 +75,7 @@ groupings:
   - title: OS Configuration
     visible: true
     variables:
-    - marketplace_listing
+    - mp_listing_resource_id
   - title: "NFS Storage Configuration"
     variables:
     - use_uhp

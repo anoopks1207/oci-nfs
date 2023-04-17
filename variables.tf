@@ -242,10 +242,6 @@ variable volume_type_vpus_per_gb_mapping {
   }
 }
 
-variable "custom_bastion_image" { 
-  type = string
-  default = "image.ocid" 
-}
 
 # Not compatible with E3.Flex shapes.  Need image released after April 2020.
 #-------------------------------------------------------------------------------------------------------------
@@ -254,17 +250,12 @@ variable "custom_bastion_image" {
 # Oracle Linux 7.8 UEK Image for filesystem
 # ------------------------------------------------------------------------------------------------------------
 variable mp_listing_id { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }
-#variable mp_listing_resource_id_ol7 { default = "ocid1.image.oc1..aaaaaaaabxwrflhsoaipmm4v7xvjfsmou42bp2fwpmuvyyug2sksfmroihta" }
-#variable mp_listing_resource_id_ol8 { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" }
 variable mp_listing_resource_version { default = "1.0" }
 variable use_marketplace_image { default = true }
 
 # ------------------------------------------------------------------------------------------------------------
 variable image_id { default = "" }
 variable "mp_listing_resource_id" { default = "" }
-#variable marketplace_listing {  default = "" }
-#variable marketplace_listing_id_ol7 { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }  #ol7
-#variable marketplace_listing_id_ol8 { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" } #ol8
 
 
 # Generate a new strong password for hacluster user
