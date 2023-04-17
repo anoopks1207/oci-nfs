@@ -261,7 +261,13 @@ variable use_marketplace_image { default = true }
 
 # ------------------------------------------------------------------------------------------------------------
 variable image_id { default = "" }
-variable "mp_listing_resource_id" { default = "" }
+variable "mp_listing_resource_id" { 
+  default = ""
+  filter {
+    name = "display_name"
+    values = ["^([a-zA-z]+)-([a-zA-z]+)-([\\.0-9]+)-([\\.0-9-]+)$"]
+    regex = true
+  } }
 variable marketplace_listing {  default = "" }
 variable marketplace_listing_id_ol7 { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkfvbjmspmuuhpoi6jptq3gc635a3gz72qujfsomvczh2miq" }  #ol7
 variable marketplace_listing_id_ol8 { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" } #ol8
