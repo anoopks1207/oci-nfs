@@ -25,6 +25,7 @@ groupings:
     - linux_os_version
     - marketplace_source_images
     - image_id
+    - custom_bastion_image
   - title: "NFS Filesystem Configuration"
     visible: true
     variables:
@@ -370,17 +371,7 @@ variables:
     minimum: 50
     title: "Size of the boot volume in GB. Recommend using 200-300 GB in production to ensure there is enough space for logs."
     default: 300
-  
-  marketplace_listing:
-    type: enum
-    title: "OS version"
-    description: "Select OS image to use"
-    required: true
-    enum:
-      - "OL7"
-      - "OL8"
-    default: "OL7"
-    visible: true
+
 
   use_uhp:
     type: boolean
