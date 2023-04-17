@@ -789,10 +789,9 @@ variables:
       compartmentId: ${compartment_ocid}
     visible:
       and:
-        - or:
-          - eq:
-            - OL7
-            - "Oracle-Linux-7.9-2023.02.28-1"
+        - eq:
+          - OL7
+          - "Oracle-Linux-7.9-2023.02.28-1"
 
   mp_listing_resource_version:
     type: string
