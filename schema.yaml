@@ -792,6 +792,20 @@ variables:
         - eq:
           - OL7
           - "Oracle-Linux-7.9-2023.02.28-1"
+  
+  vcn_display_name:
+    visible: #($network_strategy  == ""Create New VCN and Subnet"") AND (network_configuration_strategy ==  "Customize Network Configuration")
+      and:
+        - eq:
+          - network_strategy
+          - "Create New VCN and Subnet"
+        - eq:
+          - network_configuration_strategy
+          - "Customize Network Configuration"
+    type: string
+    required: true
+    title: Name
+    description: The name of the new Virtual Cloud Network (VCN)
 
   mp_listing_resource_version:
     type: string
