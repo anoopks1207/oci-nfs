@@ -257,7 +257,7 @@ variable mp_listing_id { default = "ocid1.appcataloglisting.oc1..aaaaaaaa26y5fkf
 variable mp_listing_resource_id_ol7 { default = "ocid1.image.oc1..aaaaaaaabxwrflhsoaipmm4v7xvjfsmou42bp2fwpmuvyyug2sksfmroihta" }
 variable mp_listing_resource_id_ol8 { default = "ocid1.image.oc1.ap-mumbai-1.aaaaaaaabuerxav5rirhzbtexyamgkuawq243s462irkgzvq6lq6giziu3vq" }
 variable mp_listing_resource_version { default = "1.0" }
-variable use_marketplace_image { default = false }
+variable use_marketplace_image { default = true }
 
 # ------------------------------------------------------------------------------------------------------------
 variable image_id { default = "" }
