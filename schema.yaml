@@ -781,14 +781,14 @@ variables:
     required: true
     description: "Marketplace Listing ID"
 
-  mp_listing_resource_id_os:
+  mp_listing_resource_id:
     type: oci:core:image:id
     required: true
     description: "Marketplace Image OCID"
     dependsOn:
       compartmentId: ${compartment_ocid}
 
-  mp_listing_resource_id:
+  mp_listing_resource_id_os:
     type: enum
     title: "OS version"
     description: "Select OS image to use"
