@@ -795,10 +795,9 @@ variables:
     default: "VM.Standard2.4"
     visible:
       and:
-        - or:
-          - eq:
-            - ${mp_listing_resource_id_os}
-            - "Oracle"
+        - eq:
+          - ${mp_listing_resource_id_os}
+          - "Oracle"
 
 
 
